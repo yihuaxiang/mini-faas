@@ -1,0 +1,10 @@
+async function main() {
+  const { location } = ctx.query;
+
+  const URL = `https://bing.com`;
+  const data = await ctx.curl(URL, {
+    dataType: 'json',
+  });
+
+  return { data } || {};
+}
